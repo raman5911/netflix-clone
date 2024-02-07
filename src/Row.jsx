@@ -2,6 +2,8 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import instance from './axios';
 import './Row.css';
+import YouTube from 'react-youtube';
+import movieTrailer from 'movie-trailer';
 
 function Row({ title, fetchURL, isPoster }) {
 
@@ -10,14 +12,49 @@ function Row({ title, fetchURL, isPoster }) {
     const fetchData = async () => {
         const response = await instance.get(fetchURL);
         setMovies(response.data.results);
-        console.log(response.data.results);
+        // console.log(response.data.results);
     }
   
     useEffect(()=> {
         fetchData();
     }, [fetchURL]);
 
+    const opts = {
+        height: '390',
+        width: '100%',
+        playerVars: {
+          // https://developers.google.com/youtube/player_parameters
+          autoplay: 1,
+        },
+    };
+
     const baseURL = "https://image.tmdb.org/t/p/original";
+
+    const [trailerURL, setTrailerURL] = useState("");
+    const [currentID, setCurrentID] = useState("");
+
+    const handleClick = (movie) => {
+        if(trailerURL && movie.id == currentID) {
+            setTrailerURL("");
+        }
+
+        else {
+            console.log(movie);
+            movieTrailer(null, { tmdbId: movie?.id || "", id: true, videoType: movie.media_type!=undefined ? null : 'tv' })
+            .then((response) => {
+                console.log(response);
+
+                if(response == null) {
+                    alert("No trailers were found!");
+                    return;
+                }
+
+                setTrailerURL(response);
+                setCurrentID(movie.id);
+            })
+            .catch((error) => { console.log("error: ", error) });
+        }
+    }
 
     return (
     <div className='row'>
@@ -25,9 +62,11 @@ function Row({ title, fetchURL, isPoster }) {
 
         <div className='img_container'>
             {movies.map((record) => {
-                return <img className='img' key={record.id} src={`${baseURL}${isPoster? record.poster_path : record.backdrop_path}`} />
+                return <div key={record.id} className={`img_box ${isPoster? 'poster' : 'thumbnail'}`} onClick={()=> { handleClick(record) }}><img className='img' src={`${baseURL}${isPoster? record.poster_path : record.backdrop_path}`} /></div>
             })}
         </div>
+
+        {trailerURL && <YouTube videoId={trailerURL} opts={opts} />}
     </div>
   )
 }

@@ -1,4 +1,29 @@
+.row .img_container {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+}
+
 .row .img {
-    height: 100px;
-    width: 100px;
+    /* height: 150px; */
+    width: 150px;
+    margin: auto 0.5rem;
+    cursor: pointer;
+}
+
+.row .img_box {
+    transition: all 0.5s;
+}
+
+.row .img_box:hover {
+    transform: scale(1.2);
+}
+
+.poster {
+
+}
+
+.thumbnail {
+    width: 200px;
 }

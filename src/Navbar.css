@@ -1,0 +1,19 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.nav .netflix_logo {
+    height: 100px;
+    margin-top: -15px;
+}
+
+.nav .guest_user {
+    height: 50px;
+    margin-right: 25px;
+    margin-top: 10px;
+}

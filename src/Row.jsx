@@ -58,11 +58,11 @@ function Row({ title, fetchURL, isPoster }) {
 
     return (
     <div className='row'>
-        <h2 className='title'>{ title }</h2>
+        <h2>{ title }</h2>
 
         <div className='img_container'>
             {movies.map((record) => {
-                return <div key={record.id} className={`img_box ${isPoster? 'poster' : 'thumbnail'}`} onClick={()=> { handleClick(record) }}><img className='img' src={`${baseURL}${isPoster? record.poster_path : record.backdrop_path}`} /></div>
+                return <img  key={record.id} className={`img ${(!isPoster) && 'thumbnail'}`} onClick={()=> { handleClick(record) }} src={`${baseURL}${isPoster? record.poster_path : record.backdrop_path}`} />
             })}
         </div>
 

@@ -1,29 +1,35 @@
+.row {
+    margin-left: 20px;
+}
+
 .row .img_container {
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    scrollbar-width: none;
+    padding: 20px;
+}
+
+.row .img_container::-webkit-scrollbar {
+    display: none;
 }
 
 .row .img {
-    /* height: 150px; */
-    width: 150px;
-    margin: auto 0.5rem;
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    margin-right: 10px;
+    transition: transform 450ms;
     cursor: pointer;
 }
 
-.row .img_box {
-    transition: all 0.5s;
-}
-
-.row .img_box:hover {
-    transform: scale(1.2);
-}
-
-.poster {
-
+.row .img:hover {
+    transform: scale(1.08);
 }
 
 .thumbnail {
-    width: 200px;
+    max-height: 100px !important;
+}
+
+.thumbnail:hover {
+    transform: scale(1.09);
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Navbar.css';
+import { useNavigate } from 'react-router';
 
 function Navbar() {
 
@@ -16,9 +17,11 @@ function Navbar() {
         })
     }, []);
 
+    // const navigate = useNavigate();
+
   return (
     <div className={`nav ${show && 'nav_black'}`}>
-        <img className='netflix_logo' src='./netflix-logo.png' />
+        <img className='netflix_logo' src='./netflix-logo.png' onClick={() => { window.location = '/' }} />
         <img  className='guest_user' src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="Guest User" />
     </div>
   )

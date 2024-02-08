@@ -13,6 +13,10 @@
     background-color: #111;
 }
 
+.nav .netflix_logo {
+    cursor: pointer;
+}
+
 .nav .netflix_logo, .nav .guest_user {
     width: 150px;
     object-fit: contain;

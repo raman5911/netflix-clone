@@ -38,7 +38,7 @@ function LandingPage() {
           <img src="./tv.png" alt="Netflix Shows" className="photo-desktop" />
 
           <video autoPlay muted loop className="video">
-            <source src="./video_in_tv" type="video/mp4" />
+            <source src="./video_in_tv.m4v" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>

@@ -1,0 +1,82 @@
+.main * {
+    color: #000;
+}
+
+.main {
+    margin: 2.5rem;
+    padding: 3.5rem;
+}
+
+.main .title {
+    font-weight: 700;
+}
+
+.main h1, .main h2 {
+    margin-bottom: 1.5rem;
+}
+
+.main h1, .main h2, .main h3, .main h4 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main div {
+    margin: 2rem;
+}
+
+.main p {
+    width: 60%;
+    font-size: 17px;
+}
+
+.ref_link {
+    color: #e50914;
+    text-decoration: none;
+}
+
+.ref_link:hover {
+    text-decoration: underline;
+}
+
+.photo {
+    height: 500px;
+}
+
+.main hr {
+    margin-top: 2.5rem;
+}
+
+.feedback_1 {
+    display: flex;
+}
+
+.feedback_1 a {
+    margin-left: 1rem;
+    position: relative;
+    top: 1.1rem;
+}
+
+.feedback_2 {
+    display: flex;
+}
+
+.feedback_2 h3 {
+    font-size: 1.3rem;
+}
+
+.feedback_2 .button {
+    height: 50%;
+    position: relative;
+    top: 0.5rem;
+    padding: 1rem;
+    text-decoration: none;
+    background-color: #0f0f0f;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-left: 1rem;
+    border-radius: 5px;
+}
+
+.feedback_2 .button:hover {
+    background-color: #000000c8;
+}

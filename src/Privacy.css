@@ -1,0 +1,32 @@
+.main * {
+    color: #000;
+}
+
+.main p {
+    width: auto;
+}
+
+.main li {
+    margin: 1rem auto;
+}
+
+.main button {
+    position: absolute;
+    right: 9rem;
+    background-color: rgba(0,0,0,0.1);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 550;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.main button:hover {
+    background-color: rgba(0,0,0,0.2);
+}
+
+.fa {
+    font-size: 24px;
+    margin-right: 0.3rem;
+}

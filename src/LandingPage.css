@@ -51,22 +51,22 @@ header .content {
     margin-left: 0;
     background-color: #000000;
     border-top: 10px solid #3b3737;
-    z-index: -2;
+    /* z-index: -2; */
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .photo-container {
-    z-index: 0;
+    /* z-index: 0; */
 }
 
 .photo-desktop {
     height: 450px;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .video {
-    z-index: -1;
+    /* z-index: -1; */
     position: relative;
     left: 4.9rem;
     top: -22.55rem;
@@ -89,7 +89,7 @@ header .content {
 
 .video-2 {
     height: 210px !important;
-    z-index: -1;
+    /* z-index: -1; */
     position: relative;
     left: 7.5rem;
     top: -26rem;
@@ -117,4 +117,218 @@ header .content {
     margin: 2rem auto;
     display: flex;
     justify-content: space-around;
+}
+
+@media only screen and (max-width: 1024px) {
+    .header .content {
+        top: 12rem;
+    }
+
+    .header .content .title {
+        font-size: 2.5rem;
+    }
+
+    .section {
+        height: 40vw;
+        padding: 0;
+    }
+
+    .section .text-box .title {
+        font-size: 2rem;
+    }
+
+    .section .text-box .sub-title {
+        font-size: 1.35rem;
+    }
+
+    .photo-desktop {
+        height: 350px;
+    }
+
+    .video {
+        height: 190px;
+        top: -17.5rem;
+        left: 3.9rem;
+    }
+
+    .photo-2 {
+        height: 330px;
+    }
+
+    .photo-3 {
+        height: 350px;
+        position: relative;
+        top: 2rem;
+    }
+
+    .video-2 {
+        height: 165px !important;
+        top: -18rem;
+        left: 5rem;
+    }
+
+    .footer {
+        height: 30vw;
+        padding: 2rem;
+    }
+
+    .footer p {
+        margin-left: 5.2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header .content {
+        top: 10rem;
+    }
+
+    .header .content .title {
+        font-size: 2rem;
+    }
+    
+    .header .content .sub-title {
+        font-size: 1.4rem;
+    }    
+
+    .section {
+        height: 70vw;
+        display: block;
+    }
+
+    .section .text-box .long-title {
+        width: 100%;
+    }
+
+    .photo-desktop {
+        margin-left: 3rem;
+        margin-top: -6rem;
+        height: 280px;
+    }
+
+    .video {
+        z-index: 0;
+        height: 155px;
+        left: -20.3rem;
+        top: -4.3rem;
+    }
+
+    .photo-2 {
+        height: 280px;
+        margin-bottom: -3rem;
+    }
+
+    .photo-3 {
+        height: 300px;
+        margin-top: -6rem;
+        margin-left: 3rem;
+    }
+
+    .video-2 {
+        z-index: 0;
+        height: 150px !important;
+        top: -5.5rem;
+        left: -21rem;
+    }
+
+    .photo-4 {
+        height: 300px;
+        margin-top: -5rem;
+        margin-left: 3rem;
+    }
+
+    .footer {
+        height: auto;
+    }
+
+    .footer p {
+        margin-left: 3.3rem;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .header {
+        width: 109%;
+    }
+
+    .fade_from_bottom {
+        width: 109%;
+    }
+
+    .header .content {
+        top: 5.5rem;
+        padding: 1rem;
+        height: 100vw;
+    }
+
+    .header .content .title {
+        font-size: 1.8rem;
+    }
+
+    .header .content .sub-title {
+        font-size: 1.2rem;        
+    }
+
+    .content .link {
+        font-size: 1.2rem;
+    }
+
+    .section {
+        position: relative;
+        height: 170vw;
+        margin: -2rem;
+        /* z-index: -2; */
+
+        /* background-color: #fff; */
+    }
+
+    .section .text-box .sub-title {
+        font-size: 1.2rem;
+    }
+
+    .photo-desktop {
+        position: relative;
+        height: 230px;
+        margin-left: 4rem;
+        /* z-index: -1; */
+    }
+
+    .video {
+        z-index: 0;
+        height: 128px;
+        top: -11.8rem;
+        left: 6.4rem;
+    }
+
+    .photo-3 {
+        height: 280px;
+    }
+
+    .video-2 {
+        height: 130px !important;
+        top: -14rem;
+        left: 7rem;
+    }
+
+    .photo-4 {
+        height: 260px;
+        margin-top: -5rem;
+    }
+
+    .footer {
+        height: auto;
+        padding: 3rem;
+    }
+
+    .footer_links {
+        flex-direction: column;
+        margin: 1rem;
+    }
+
+    .footer_link {
+        margin-top: 0.5rem;
+    }
+
+    .footer p {
+        margin-left: 1rem;
+    }
 }

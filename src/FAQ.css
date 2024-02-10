@@ -80,3 +80,52 @@
 .feedback_2 .button:hover {
     background-color: #000000c8;
 }
+
+@media only screen and (max-width: 1200px) {
+    .photo {
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .photo {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .photo {
+        height: 150px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .main {
+        margin: 1rem;
+        padding: 2rem;
+    }
+
+    .main p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .feedback_2 .button {
+        font-size: 0.7rem;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .main {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+ .photo {
+    height: 120px;
+ }
+}
